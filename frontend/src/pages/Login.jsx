@@ -47,11 +47,11 @@ export default function Login() {
   return (
     <div className="relative flex min-h-screen overflow-hidden">
 
-      {/* Background Glow */}
+      {/* Glow Background */}
       <div className="glow-purple"></div>
       <div className="glow-blue"></div>
 
-      {/* LEFT SECTION */}
+      {/* LEFT SIDE */}
       <div className="hidden lg:flex w-1/2 flex-col justify-center px-20 relative z-10">
 
         {/* Logo */}
@@ -63,13 +63,13 @@ export default function Login() {
           />
         </div>
 
-        {/* Badge */}
+        {/* Small Badge */}
         <div className="hero-badge">
           SMART FINANCE DASHBOARD
         </div>
 
         {/* Main Heading */}
-        <h1 className="hero-title max-w-xl mt-8">
+        <h1 className="hero-title mt-8 max-w-xl">
           Empowering
           <br />
           Strategies For
@@ -79,20 +79,20 @@ export default function Login() {
 
         {/* Description */}
         <p className="hero-subtitle mt-8 max-w-lg">
-          Embrace a growth mindset, track your spending habits,
-          monitor income streams, and leverage intelligent analytics
-          to build a secure financial future with confidence.
+          Embrace a growth mindset, educate yourself on financial
+          literacy, and leverage technology to empower your journey
+          towards financial success.
         </p>
 
         {/* Quote */}
         <p className="quote-text mt-6">
-          “Wealth is built through clarity, not chaos.”
+          “Smart money management begins with disciplined tracking.”
         </p>
 
-        {/* Bottom Stats */}
+        {/* Feature Cards */}
         <div className="mt-14 flex gap-6">
 
-          <div className="dashboard-card w-48">
+          <div className="dashboard-card w-52">
             <p className="text-sm text-slate-400">
               Monthly Savings
             </p>
@@ -102,11 +102,11 @@ export default function Login() {
             </h2>
 
             <p className="mt-2 text-xs text-slate-500">
-              +12% this month
+              +12% increase this month
             </p>
           </div>
 
-          <div className="dashboard-card w-48">
+          <div className="dashboard-card w-52">
             <p className="text-sm text-slate-400">
               Investment Growth
             </p>
@@ -116,14 +116,14 @@ export default function Login() {
             </h2>
 
             <p className="mt-2 text-xs text-slate-500">
-              Stable portfolio growth
+              Stable portfolio performance
             </p>
           </div>
 
         </div>
       </div>
 
-      {/* RIGHT SECTION */}
+      {/* RIGHT SIDE */}
       <div className="flex w-full lg:w-1/2 items-center justify-center px-6 py-12 relative z-10">
 
         <form
@@ -145,8 +145,10 @@ export default function Login() {
             Welcome Back
           </h2>
 
+          {/* Subtitle */}
           <p className="mt-3 text-slate-400 leading-7">
-            Sign in to continue managing your finances securely.
+            Access your personal finance dashboard securely
+            and continue tracking your financial journey.
           </p>
 
           {/* Error */}
@@ -192,13 +194,13 @@ export default function Login() {
 
           {/* Footer */}
           <p className="mt-6 text-center text-sm text-slate-300">
-            New here?{" "}
+            Don’t have an account?{" "}
 
             <Link
               to="/register"
               className="font-semibold text-violet-300 transition hover:text-white hover:underline"
             >
-              Create an account
+              Create one
             </Link>
           </p>
 
