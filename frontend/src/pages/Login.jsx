@@ -32,7 +32,6 @@ export default function Login() {
 
     try {
       await login(form);
-
       navigate("/");
     } catch (err) {
       setError(
@@ -51,7 +50,7 @@ export default function Login() {
       <div className="glow-purple"></div>
       <div className="glow-blue"></div>
 
-      {/* LEFT SECTION */}
+      {/* LEFT SIDE */}
       <div className="hidden lg:flex w-1/2 flex-col justify-center px-20 relative z-10">
 
         {/* Logo */}
@@ -63,27 +62,37 @@ export default function Login() {
           />
         </div>
 
+        {/* Tag */}
+        <div className="inline-flex w-fit items-center rounded-full border border-violet-500/20 bg-violet-500/10 px-5 py-2 text-sm text-violet-200 backdrop-blur-xl">
+          ✦ Modern Finance Platform
+        </div>
+
         {/* Hero */}
-        <h1 className="hero-title max-w-xl">
-          Financial Clarity
+        <h1 className="hero-title mt-8 max-w-2xl">
+          Take Control
           <br />
-          Starts Here.
+          Of Your Money
+          <br />
+          With Confidence.
         </h1>
 
-        <p className="hero-subtitle mt-8 max-w-lg">
-          Track expenses, monitor income,
-          and gain intelligent insights into your financial life
-          with a beautifully crafted modern dashboard.
+        {/* Subtitle */}
+        <p className="hero-subtitle mt-8 max-w-xl">
+          Track expenses, manage income,
+          monitor financial growth,
+          and build smarter habits —
+          all inside one beautifully crafted dashboard.
         </p>
 
+        {/* Quote */}
         <p className="quote-text mt-6">
-          “Wealth is built through clarity, not chaos.”
+          “Financial freedom begins when you understand where your money flows.”
         </p>
 
-        {/* Dashboard Stats */}
-        <div className="mt-12 flex gap-6">
+        {/* Stats */}
+        <div className="mt-14 flex gap-6">
 
-          <div className="dashboard-card w-44">
+          <div className="dashboard-card w-48">
             <p className="text-sm text-slate-400">
               Monthly Savings
             </p>
@@ -91,9 +100,13 @@ export default function Login() {
             <h2 className="mt-3 text-3xl font-bold text-green-400">
               ₹24K
             </h2>
+
+            <p className="mt-2 text-sm text-green-300">
+              +12% this month
+            </p>
           </div>
 
-          <div className="dashboard-card w-44">
+          <div className="dashboard-card w-48">
             <p className="text-sm text-slate-400">
               Investment Growth
             </p>
@@ -101,12 +114,16 @@ export default function Login() {
             <h2 className="mt-3 text-3xl font-bold text-violet-400">
               +18%
             </h2>
+
+            <p className="mt-2 text-sm text-violet-300">
+              Stable portfolio rise
+            </p>
           </div>
 
         </div>
       </div>
 
-      {/* RIGHT SECTION */}
+      {/* RIGHT SIDE */}
       <div className="flex w-full lg:w-1/2 items-center justify-center px-6 py-12 relative z-10">
 
         <form
@@ -114,13 +131,22 @@ export default function Login() {
           className="glass-card w-full max-w-lg p-10"
         >
 
+          {/* Mobile Logo */}
+          <div className="mb-8 flex justify-center lg:hidden">
+            <img
+              src={logo}
+              alt="FinTrack"
+              className="w-44"
+            />
+          </div>
+
           {/* Heading */}
           <h2 className="text-4xl font-bold text-white">
-            Sign In
+            Welcome Back
           </h2>
 
           <p className="mt-3 text-slate-400 leading-7">
-            Welcome back. Continue managing your finances securely.
+            Sign in to continue managing your finances securely and intelligently.
           </p>
 
           {/* Error */}
@@ -166,13 +192,13 @@ export default function Login() {
 
           {/* Footer */}
           <p className="mt-6 text-center text-sm text-slate-300">
-            New here?{" "}
+            Don’t have an account?{" "}
 
             <Link
               to="/register"
               className="font-semibold text-violet-300 transition hover:text-white hover:underline"
             >
-              Create an account
+              Create Account
             </Link>
           </p>
 
