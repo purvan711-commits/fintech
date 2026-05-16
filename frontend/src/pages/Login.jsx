@@ -32,6 +32,7 @@ export default function Login() {
 
     try {
       await login(form);
+
       navigate("/");
     } catch (err) {
       setError(
@@ -46,11 +47,11 @@ export default function Login() {
   return (
     <div className="relative flex min-h-screen overflow-hidden">
 
-      {/* Glow Effects */}
+      {/* Background Glow */}
       <div className="glow-purple"></div>
       <div className="glow-blue"></div>
 
-      {/* LEFT SIDE */}
+      {/* LEFT SECTION */}
       <div className="hidden lg:flex w-1/2 flex-col justify-center px-20 relative z-10">
 
         {/* Logo */}
@@ -62,34 +63,33 @@ export default function Login() {
           />
         </div>
 
-        {/* Tag */}
-        <div className="inline-flex w-fit items-center rounded-full border border-violet-500/20 bg-violet-500/10 px-5 py-2 text-sm text-violet-200 backdrop-blur-xl">
-          ✦ Modern Finance Platform
+        {/* Badge */}
+        <div className="hero-badge">
+          SMART FINANCE DASHBOARD
         </div>
 
-        {/* Hero */}
-        <h1 className="hero-title mt-8 max-w-2xl">
-          Take Control
+        {/* Main Heading */}
+        <h1 className="hero-title max-w-xl mt-8">
+          Empowering
           <br />
-          Of Your Money
+          Strategies For
           <br />
-          With Confidence.
+          Financial Success
         </h1>
 
-        {/* Subtitle */}
-        <p className="hero-subtitle mt-8 max-w-xl">
-          Track expenses, manage income,
-          monitor financial growth,
-          and build smarter habits —
-          all inside one beautifully crafted dashboard.
+        {/* Description */}
+        <p className="hero-subtitle mt-8 max-w-lg">
+          Embrace a growth mindset, track your spending habits,
+          monitor income streams, and leverage intelligent analytics
+          to build a secure financial future with confidence.
         </p>
 
         {/* Quote */}
         <p className="quote-text mt-6">
-          “Financial freedom begins when you understand where your money flows.”
+          “Wealth is built through clarity, not chaos.”
         </p>
 
-        {/* Stats */}
+        {/* Bottom Stats */}
         <div className="mt-14 flex gap-6">
 
           <div className="dashboard-card w-48">
@@ -101,7 +101,7 @@ export default function Login() {
               ₹24K
             </h2>
 
-            <p className="mt-2 text-sm text-green-300">
+            <p className="mt-2 text-xs text-slate-500">
               +12% this month
             </p>
           </div>
@@ -115,15 +115,15 @@ export default function Login() {
               +18%
             </h2>
 
-            <p className="mt-2 text-sm text-violet-300">
-              Stable portfolio rise
+            <p className="mt-2 text-xs text-slate-500">
+              Stable portfolio growth
             </p>
           </div>
 
         </div>
       </div>
 
-      {/* RIGHT SIDE */}
+      {/* RIGHT SECTION */}
       <div className="flex w-full lg:w-1/2 items-center justify-center px-6 py-12 relative z-10">
 
         <form
@@ -146,7 +146,7 @@ export default function Login() {
           </h2>
 
           <p className="mt-3 text-slate-400 leading-7">
-            Sign in to continue managing your finances securely and intelligently.
+            Sign in to continue managing your finances securely.
           </p>
 
           {/* Error */}
@@ -192,13 +192,13 @@ export default function Login() {
 
           {/* Footer */}
           <p className="mt-6 text-center text-sm text-slate-300">
-            Don’t have an account?{" "}
+            New here?{" "}
 
             <Link
               to="/register"
               className="font-semibold text-violet-300 transition hover:text-white hover:underline"
             >
-              Create Account
+              Create an account
             </Link>
           </p>
 
