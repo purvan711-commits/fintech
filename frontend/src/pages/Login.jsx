@@ -47,7 +47,7 @@ export default function Login() {
   return (
     <div className="relative flex min-h-screen overflow-hidden">
 
-      {/* Glow Background */}
+      {/* Background Glow */}
       <div className="glow-purple"></div>
       <div className="glow-blue"></div>
 
@@ -63,12 +63,12 @@ export default function Login() {
           />
         </div>
 
-        {/* Small Badge */}
+        {/* Badge */}
         <div className="hero-badge">
           SMART FINANCE DASHBOARD
         </div>
 
-        {/* Main Heading */}
+        {/* Main Hero */}
         <h1 className="hero-title mt-8 max-w-xl">
           Empowering
           <br />
@@ -89,7 +89,7 @@ export default function Login() {
           “Smart money management begins with disciplined tracking.”
         </p>
 
-        {/* Feature Cards */}
+        {/* Stats Cards */}
         <div className="mt-14 flex gap-6">
 
           <div className="dashboard-card w-52">
@@ -142,13 +142,13 @@ export default function Login() {
 
           {/* Heading */}
           <h2 className="text-4xl font-bold text-white">
-            Welcome Back
+            Access Your Dashboard
           </h2>
 
           {/* Subtitle */}
           <p className="mt-3 text-slate-400 leading-7">
-            Access your personal finance dashboard securely
-            and continue tracking your financial journey.
+            Smart finance tracking, intelligent insights,
+            and secure money management — all in one place.
           </p>
 
           {/* Error */}
