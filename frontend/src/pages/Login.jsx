@@ -129,7 +129,7 @@ export default function Login() {
 
         <form
           onSubmit={handleSubmit}
-          className="glass-card w-full max-w-lg p-10"
+         className="glass-card w-full max-w-2xl p-12"
         >
 
           {/* Mobile Logo */}
