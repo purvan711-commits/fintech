@@ -48,8 +48,8 @@ body {
   color: var(--text-primary);
 
   background:
-    radial-gradient(circle at top left, rgba(139, 92, 246, 0.20), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.16), transparent 35%),
+    radial-gradient(circle at top left, rgba(139, 92, 246, 0.22), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(37, 99, 235, 0.18), transparent 35%),
     linear-gradient(
       135deg,
       #050816 0%,
@@ -125,17 +125,17 @@ body::before {
 .glow-purple {
   position: absolute;
 
-  width: 480px;
-  height: 480px;
+  width: 520px;
+  height: 520px;
 
-  background: rgba(124, 58, 237, 0.24);
+  background: rgba(124, 58, 237, 0.26);
 
   border-radius: 9999px;
 
-  filter: blur(150px);
+  filter: blur(160px);
 
-  top: -180px;
-  left: -180px;
+  top: -220px;
+  left: -220px;
 
   z-index: -1;
 }
@@ -143,17 +143,17 @@ body::before {
 .glow-blue {
   position: absolute;
 
-  width: 450px;
-  height: 450px;
+  width: 500px;
+  height: 500px;
 
   background: rgba(37, 99, 235, 0.18);
 
   border-radius: 9999px;
 
-  filter: blur(150px);
+  filter: blur(160px);
 
-  bottom: -180px;
-  right: -180px;
+  bottom: -220px;
+  right: -220px;
 
   z-index: -1;
 }
@@ -175,7 +175,7 @@ body::before {
     0 20px 60px rgba(0,0,0,0.45),
     inset 0 1px 0 rgba(255,255,255,0.05);
 
-  border-radius: 32px;
+  border-radius: 36px;
 
   transition: all 0.35s ease;
 }
@@ -183,7 +183,7 @@ body::before {
 .glass-card:hover {
   box-shadow:
     0 25px 70px rgba(0,0,0,0.55),
-    0 0 25px rgba(124,58,237,0.18);
+    0 0 30px rgba(124,58,237,0.22);
 }
 
 /* =========================
@@ -195,7 +195,7 @@ body::before {
 
   width: fit-content;
 
-  padding: 10px 18px;
+  padding: 12px 22px;
 
   border-radius: 999px;
 
@@ -203,17 +203,19 @@ body::before {
 
   background: rgba(255,255,255,0.04);
 
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.78);
 
   font-size: 0.75rem;
 
   font-weight: 600;
 
-  letter-spacing: 0.25em;
+  letter-spacing: 0.28em;
 
   text-transform: uppercase;
 
   backdrop-filter: blur(12px);
+
+  margin-top: -10px;
 }
 
 /* =========================
@@ -221,19 +223,21 @@ body::before {
 ========================= */
 
 .hero-title {
-  font-size: clamp(3.5rem, 5vw, 6rem);
+  font-size: clamp(3.8rem, 5vw, 6.5rem);
 
   font-weight: 800;
 
-  line-height: 0.93;
+  line-height: 0.92;
 
-  letter-spacing: -0.08em;
+  letter-spacing: -0.09em;
 
   color: white;
+
+  margin-top: 28px;
 }
 
 /* =========================
-   SUBTITLE
+   HERO SUBTITLE
 ========================= */
 
 .hero-subtitle {
@@ -241,7 +245,7 @@ body::before {
 
   line-height: 2;
 
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 
   max-width: 560px;
 }
@@ -261,25 +265,28 @@ body::before {
 }
 
 /* =========================
-   LOGO IMAGE
+   LARGE LOGO
 ========================= */
 
 .logo-image {
-  width: 320px;
+  width: 700px;
+  height: auto;
 
   object-fit: contain;
 
-  filter:
-    drop-shadow(0 0 20px rgba(139,92,246,0.28));
+  margin-bottom: -20px;
 
-  transition: all 0.35s ease;
+  filter:
+    drop-shadow(0 0 30px rgba(139,92,246,0.35));
+
+  transition: all 0.4s ease;
 }
 
 .logo-image:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
 
   filter:
-    drop-shadow(0 0 35px rgba(139,92,246,0.5));
+    drop-shadow(0 0 45px rgba(139,92,246,0.55));
 }
 
 /* =========================
@@ -289,9 +296,9 @@ body::before {
 .premium-input {
   width: 100%;
 
-  padding: 18px 20px;
+  padding: 20px 22px;
 
-  border-radius: 20px;
+  border-radius: 22px;
 
   background: rgba(255,255,255,0.06);
 
@@ -303,7 +310,7 @@ body::before {
 
   transition: all 0.3s ease;
 
-  font-size: 0.96rem;
+  font-size: 1rem;
 }
 
 .premium-input::placeholder {
@@ -335,14 +342,14 @@ body::before {
   transition: all 0.35s ease;
 
   box-shadow:
-    0 10px 25px rgba(124, 58, 237, 0.35);
+    0 12px 28px rgba(124, 58, 237, 0.35);
 }
 
 .primary-btn:hover {
   transform: translateY(-2px) scale(1.01);
 
   box-shadow:
-    0 18px 40px rgba(124, 58, 237, 0.5);
+    0 20px 45px rgba(124, 58, 237, 0.5);
 }
 
 /* =========================
@@ -371,68 +378,28 @@ body::before {
 }
 
 /* =========================
-   TABLES
-========================= */
-
-.table-container {
-  overflow-x: auto;
-
-  border-radius: 20px;
-
-  background: rgba(255,255,255,0.03);
-
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-table {
-  width: 100%;
-
-  border-collapse: collapse;
-}
-
-th {
-  background: rgba(255,255,255,0.04);
-
-  color: rgba(255,255,255,0.8);
-
-  text-align: left;
-
-  padding: 18px;
-
-  font-weight: 600;
-}
-
-td {
-  padding: 18px;
-
-  border-top: 1px solid rgba(255,255,255,0.06);
-
-  color: rgba(255,255,255,0.7);
-}
-
-/* =========================
    RESPONSIVE
 ========================= */
 
 @media (max-width: 1200px) {
 
-  .hero-title {
-    font-size: 4.8rem;
+  .logo-image {
+    width: 380px;
   }
 
-  .logo-image {
-    width: 280px;
+  .hero-title {
+    font-size: 5rem;
   }
 }
 
 @media (max-width: 1024px) {
 
-  .hero-title {
-    font-size: 4rem;
+  .logo-image {
+    width: 320px;
   }
 
-  .logo-image {
-    width: 240px;
+  .hero-title {
+    font-size: 4rem;
   }
 }
 
@@ -442,16 +409,16 @@ td {
     padding: 28px !important;
   }
 
+  .logo-image {
+    width: 250px;
+  }
+
   .hero-title {
-    font-size: 2.8rem;
+    font-size: 2.9rem;
   }
 
   .hero-subtitle {
     font-size: 1rem;
-  }
-
-  .logo-image {
-    width: 220px;
   }
 
   .glow-purple,
@@ -463,19 +430,19 @@ td {
 
 @media (max-width: 480px) {
 
-  .hero-title {
-    font-size: 2.3rem;
-  }
-
   .glass-card {
-    border-radius: 24px;
+    border-radius: 28px;
   }
 
-  .premium-input {
-    padding: 16px 18px;
+  .hero-title {
+    font-size: 2.4rem;
   }
 
   .logo-image {
-    width: 200px;
+    width: 220px;
+  }
+
+  .premium-input {
+    padding: 18px;
   }
 }
