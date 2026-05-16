@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import logo from "../assets/logo.png";
+import logo from "../assets/icons.svg";
 
 export default function Login() {
   const { login } = useAuth();
@@ -45,110 +45,139 @@ export default function Login() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-5">
+    <div className="relative flex min-h-screen overflow-hidden">
 
-      {/* Background Glow Effects */}
+      {/* Glow Effects */}
       <div className="glow-purple"></div>
       <div className="glow-blue"></div>
 
-      {/* Login Card */}
-      <form
-        onSubmit={handleSubmit}
-        className="glass-card relative w-full max-w-md p-10"
-      >
+      {/* LEFT SECTION */}
+      <div className="hidden lg:flex w-1/2 flex-col justify-center px-20 relative z-10">
 
-        {/* Logo Glow */}
-        <div className="absolute top-10 left-1/2 h-24 w-24 -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl"></div>
-
-        {/* Logo Section */}
-        <div className="mb-10 flex flex-col items-center">
-
+        {/* Logo */}
+        <div className="mb-10">
           <img
             src={logo}
-            alt="FinTrack Logo"
-            className="relative z-10 w-52 object-contain drop-shadow-[0_0_25px_rgba(139,92,246,0.35)] transition duration-300 hover:scale-[1.02]"
+            alt="FinTrack"
+            className="logo-image"
           />
-
-          <p className="mt-3 text-center text-sm uppercase tracking-[0.25em] text-violet-200">
-            Smart Finance Dashboard
-          </p>
-
         </div>
 
-        {/* Heading */}
-        <h1 className="hero-title text-center">
-          Own Your
+        {/* Hero */}
+        <h1 className="hero-title max-w-xl">
+          Financial Clarity
           <br />
-          Financial Future
+          Starts Here.
         </h1>
 
-        {/* Subtitle */}
-        <p className="hero-subtitle mt-5 text-center">
-          Smart insights. Secure tracking.
-          Elegant finance management built for modern life.
+        <p className="hero-subtitle mt-8 max-w-lg">
+          Track expenses, monitor income,
+          and gain intelligent insights into your financial life
+          with a beautifully crafted modern dashboard.
         </p>
 
-        {/* Catchy Quote */}
-        <p className="quote-text text-center">
-          “Money flows where clarity grows.”
+        <p className="quote-text mt-6">
+          “Wealth is built through clarity, not chaos.”
         </p>
 
-        {/* Error Message */}
-        {error && (
-          <div className="mt-6 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
-            {error}
+        {/* Dashboard Stats */}
+        <div className="mt-12 flex gap-6">
+
+          <div className="dashboard-card w-44">
+            <p className="text-sm text-slate-400">
+              Monthly Savings
+            </p>
+
+            <h2 className="mt-3 text-3xl font-bold text-green-400">
+              ₹24K
+            </h2>
           </div>
-        )}
 
-        {/* Inputs */}
-        <div className="mt-8 space-y-5">
+          <div className="dashboard-card w-44">
+            <p className="text-sm text-slate-400">
+              Investment Growth
+            </p>
 
-          {/* Email */}
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={form.email}
-            onChange={handleChange}
-            required
-            className="premium-input"
-          />
-
-          {/* Password */}
-          <input
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-            value={form.password}
-            onChange={handleChange}
-            required
-            className="premium-input"
-          />
+            <h2 className="mt-3 text-3xl font-bold text-violet-400">
+              +18%
+            </h2>
+          </div>
 
         </div>
+      </div>
 
-        {/* Login Button */}
-        <button
-          type="submit"
-          disabled={loading}
-          className="primary-btn mt-7 w-full rounded-2xl py-4 text-lg font-semibold text-white"
+      {/* RIGHT SECTION */}
+      <div className="flex w-full lg:w-1/2 items-center justify-center px-6 py-12 relative z-10">
+
+        <form
+          onSubmit={handleSubmit}
+          className="glass-card w-full max-w-lg p-10"
         >
-          {loading ? "Signing In..." : "Sign In"}
-        </button>
 
-        {/* Footer */}
-        <p className="mt-6 text-center text-sm text-slate-300">
-          New here?{" "}
+          {/* Heading */}
+          <h2 className="text-4xl font-bold text-white">
+            Sign In
+          </h2>
 
-          <Link
-            to="/register"
-            className="font-semibold text-violet-300 transition hover:text-white hover:underline"
+          <p className="mt-3 text-slate-400 leading-7">
+            Welcome back. Continue managing your finances securely.
+          </p>
+
+          {/* Error */}
+          {error && (
+            <div className="mt-6 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+              {error}
+            </div>
+          )}
+
+          {/* Inputs */}
+          <div className="mt-8 space-y-5">
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="premium-input"
+            />
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+              value={form.password}
+              onChange={handleChange}
+              required
+              className="premium-input"
+            />
+
+          </div>
+
+          {/* Button */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="primary-btn mt-7 w-full rounded-2xl py-4 text-lg font-semibold text-white"
           >
-            Create an account
-          </Link>
-        </p>
+            {loading ? "Signing In..." : "Sign In"}
+          </button>
 
-      </form>
+          {/* Footer */}
+          <p className="mt-6 text-center text-sm text-slate-300">
+            New here?{" "}
+
+            <Link
+              to="/register"
+              className="font-semibold text-violet-300 transition hover:text-white hover:underline"
+            >
+              Create an account
+            </Link>
+          </p>
+
+        </form>
+      </div>
     </div>
   );
 }
