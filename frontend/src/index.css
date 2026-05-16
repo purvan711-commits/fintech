@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #eef2ff 0%,
+    #dbeafe 25%,
+    #ede9fe 50%,
+    #f5f3ff 75%,
+    #fdf2f8 100%
+  );
+
+  background-attachment: fixed;
+}
+
+::selection {
+  background: #7c3aed;
+  color: white;
+}
