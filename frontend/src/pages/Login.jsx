@@ -31,76 +31,107 @@ export default function Login() {
       await login(form);
       navigate("/");
     } catch (err) {
-      setError(err?.response?.data?.error || "Login failed");
+      setError(err?.response?.data?.error || "Invalid email or password");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden px-5">
 
-      {/* Background Glow Effects */}
-      <div className="absolute top-10 left-10 h-72 w-72 rounded-full bg-violet-300 opacity-20 blur-3xl"></div>
-
-      <div className="absolute bottom-10 right-10 h-72 w-72 rounded-full bg-cyan-300 opacity-20 blur-3xl"></div>
+      {/* Glow Effects */}
+      <div className="glow-purple"></div>
+      <div className="glow-blue"></div>
 
       {/* Login Card */}
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md rounded-3xl border border-white/40 bg-white/70 p-8 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:shadow-purple-200"
+        className="glass-card w-full max-w-md p-10"
       >
-        <h1 className="mb-2 text-4xl font-extrabold text-slate-800">
-          Login
+
+        {/* Logo */}
+        <div className="mb-8 flex items-center gap-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-600 to-blue-500 text-2xl font-bold text-white shadow-lg">
+            F
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-bold text-white">
+              FinTrack
+            </h2>
+
+            <p className="text-sm text-violet-200">
+              Smart Finance Dashboard
+            </p>
+          </div>
+        </div>
+
+        {/* Heading */}
+        <h1 className="hero-title">
+          Own Your
+          <br />
+          Financial Future
         </h1>
 
-        <p className="mb-8 text-slate-500">
-          Access your finance dashboard.
+        {/* Subtitle */}
+        <p className="hero-subtitle mt-5">
+          Smart insights. Elegant budgeting.
+          Powerful financial tracking for modern life.
         </p>
 
+        {/* Quote */}
+        <p className="quote-text">
+          “Money flows where clarity grows.”
+        </p>
+
+        {/* Error */}
         {error && (
-          <div className="mb-4 rounded-2xl border border-rose-300 bg-rose-100 px-4 py-3 text-sm text-rose-700">
+          <div className="mt-6 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
             {error}
           </div>
         )}
 
-        <div className="space-y-5">
+        {/* Inputs */}
+        <div className="mt-8 space-y-5">
           <input
-            name="email"
             type="email"
+            name="email"
             placeholder="Enter your email"
             value={form.email}
             onChange={handleChange}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white/80 px-5 py-4 text-slate-700 shadow-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-violet-400 focus:ring-4 focus:ring-violet-200"
+            className="premium-input"
           />
 
           <input
-            name="password"
             type="password"
+            name="password"
             placeholder="Enter your password"
             value={form.password}
             onChange={handleChange}
             required
-            className="w-full rounded-2xl border border-slate-200 bg-white/80 px-5 py-4 text-slate-700 shadow-sm outline-none transition-all duration-300 placeholder:text-slate-400 focus:border-violet-400 focus:ring-4 focus:ring-violet-200"
+            className="premium-input"
           />
         </div>
 
+        {/* Button */}
         <button
           type="submit"
           disabled={loading}
-          className="mt-6 w-full rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 py-4 font-semibold tracking-wide text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-violet-300 disabled:cursor-not-allowed disabled:opacity-60"
+          className="primary-btn mt-7 w-full rounded-2xl py-4 text-lg font-semibold text-white"
         >
-          {loading ? "Logging in..." : "Login"}
+          {loading ? "Signing In..." : "Sign In"}
         </button>
 
-        <p className="mt-6 text-center text-sm text-slate-500">
-          No account?{" "}
+        {/* Footer */}
+        <p className="mt-6 text-center text-sm text-slate-300">
+          New here?{" "}
           <Link
             to="/register"
-            className="font-medium text-violet-600 transition hover:text-violet-800 hover:underline"
+            className="font-semibold text-violet-300 transition hover:text-white hover:underline"
           >
-            Register
+            Create an account
           </Link>
         </p>
       </form>
