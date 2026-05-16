@@ -269,7 +269,8 @@ body::before {
 ========================= */
 
 .logo-image {
-  width: 460px;
+  width: 700px;
+  height: auto;
 
   object-fit: contain;
 
