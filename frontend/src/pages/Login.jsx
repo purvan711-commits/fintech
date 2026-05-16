@@ -56,11 +56,12 @@ export default function Login() {
 
         {/* Logo */}
         <div className="mb-10">
-          <img
+          <img 
             src={logo}
             alt="FinTrack"
+            
             className="logo-image"
-          />
+          />  
         </div>
 
         {/* Badge */}
